@@ -1,0 +1,131 @@
+html,
+body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.bgba {
+    background-color: #9aca3c !important;
+}
+
+.tgba {
+    color: #9aca3c !important;
+}
+
+/* --------------SOO----------------- */
+
+.text-long-shadow {
+    text-shadow: #81a835 1px 1px,
+        #81a835 2px 2px,
+        #81a835 3px 3px,
+        #81a835 4px 4px,
+        #81a835 5px 5px,
+        #81a835 6px 6px,
+        #81a835 7px 7px,
+        #81a835 8px 8px,
+        #81a835 9px 9px,
+        #81a835 10px 10px,
+        #81a835 11px 11px,
+        #81a835 12px 12px,
+        #81a835 13px 13px,
+        #81a835 14px 14px,
+        #81a835 15px 15px,
+        #81a835 16px 16px,
+        #81a835 17px 17px,
+        #81a835 18px 18px,
+        #81a835 19px 19px,
+        #81a835 20px 20px,
+        #81a835 21px 21px,
+        #a0c754 22px 22px,
+        #a0c754 23px 23px,
+        #a0c754 24px 24px,
+        #a0c754 25px 25px,
+        #a0c754 26px 26px,
+        #a0c754 27px 27px,
+        #a0c754 28px 28px,
+        #a0c754 29px 29px,
+        #a0c754 30px 30px,
+        #afd566 31px 31px,
+        #afd566 32px 32px,
+        #afd566 33px 33px,
+        #afd566 34px 34px,
+        #afd566 35px 35px,
+        #afd566 36px 36px,
+        #afd566 37px 37px;
+
+    color: #ffffff;
+}
+
+.error-long-shadow {
+    text-shadow: #ad5656 1px 1px,
+        #ad5656 2px 2px,
+        #ad5656 3px 3px,
+        #ad5656 4px 4px,
+        #ad5656 5px 5px,
+        #ad5656 6px 6px,
+        #ad5656 7px 7px,
+        #ad5656 8px 8px,
+        #ad5656 9px 9px,
+        #ad5656 10px 10px,
+        #ad5656 11px 11px,
+        #ad5656 12px 12px,
+        #ad5656 13px 13px,
+        #ad5656 14px 14px,
+        #ad5656 15px 15px,
+        #ad5656 16px 16px,
+        #ad5656 17px 17px,
+        #ad5656 18px 18px,
+        #ad5656 19px 19px,
+        #ad5656 20px 20px,
+        #ad5656 21px 21px,
+        #b86464 22px 22px,
+        #b86464 23px 23px,
+        #b86464 24px 24px,
+        #b86464 25px 25px,
+        #b86464 26px 26px,
+        #b86464 27px 27px,
+        #b86464 28px 28px,
+        #b86464 29px 29px,
+        #b86464 30px 30px,
+        #c87575 31px 31px,
+        #c87575 32px 32px,
+        #c87575 33px 33px,
+        #c87575 34px 34px,
+        #c87575 35px 35px,
+        #c87575 36px 36px,
+        #c87575 37px 37px;
+    width: 100%;
+    font-size: 10rem;
+    text-align: center;
+    padding: 20px 0 !important;
+    color: #ffffff;
+}
+
+.code-text {
+    width: 100%;
+    font-size: 10rem;
+    color: black;
+    text-align: center;
+    padding: 0px 0 !important;
+}
+
+.vl {
+    border-left: 1px solid #bebbbb;
+    height: 250px;
+    margin: auto 30px
+}
+
+@media (orientation: portrait) {
+    .valign-wrapper {
+        display: grid;
+    }
+}

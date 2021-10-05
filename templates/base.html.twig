@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Camara de Diputados de la Provincia de Buenos Aires">
+    <meta name="keywords" content="Camara de Diputados, Provincia de Buenos Aires, política, Diputados, Diputados Buenos Aires, legislación, leyes">
+    <meta name="geo.placename" content="Buenos Aires">
+    <meta name="lang" content="es-AR">
+    <meta name="locality" content="Provincia de Buenos Aires">
+    <meta name="owner" content="Camara de Diputados de la Provincia de Buenos Aires">
+    <meta name="copyright" content="&copy; Camara de Diputados de la Provincia de Buenos Aires">
+    <meta property="og:site_name" content="Camara de Diputados de la Provincia de Buenos Aires" />
+    <meta property="og:type" content="government" />
+    <meta property="og:locale" content="ca_ES" />
+    <meta property="og:title" content="Camara de Diputados de la Provincia de Buenos Aires" />
+    <meta property="og:description" content="Camara de Diputados de la Provincia de Buenos Aires" />
+
+    <title>
+        {% block title %} 
+            Dirección Provincial de Personas Jurídicas
+        {% endblock %}
+    </title>
+    {% block stylesheets %}{% endblock %}
+    {{ encore_entry_link_tags('app') }}
+    <link rel="icon" type="image/x-icon" href="{{ asset('build/images/favicon/favicon-32x32.png') }}" />
+</head>
+<body>
+    <div id="app">
+        <app
+            :data-app-base-url="{{ url('index')|json_encode }}"
+            :data-assets-path="{{ asset('')|json_encode }}"
+            :data-env="{{ env |json_encode }}"
+            inline-template>
+            <div>
+                {% block app %}
+                    {% block header %}
+                        {% include 'modulos/header.html.twig' %}
+                    {% endblock %}
+                    {% block sidebar %}
+                        {% include 'modulos/aside.html.twig' %}
+                    {% endblock %}
+                        <main class="container-sm">
+                            {% block body %}{% endblock %}
+                        </main>
+                    {% block footer %}
+                        {% include 'modulos/footer.html.twig' %}
+                    {% endblock %}
+                {% endblock %}
+            </div>
+        </app>
+    </div>
+
+    {{ encore_entry_script_tags('app') }}
+    {% block javascripts %}{% endblock %}
+</body>
+</html>

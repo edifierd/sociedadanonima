@@ -1,0 +1,62 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>CARPETAS RECINTO - INICIO DE SESIÓN</title>
+    {% block stylesheets %}{% endblock %}
+    {{ encore_entry_link_tags('app') }}
+    <link rel="icon" type="image/x-icon" href="{{ asset('build/images/favicon/favicon-32x32.png') }}" />
+</head>
+<body>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <div class="d-none d-sm-block">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                  <img src="{{ asset('build/images/logo_sm.png')}}" class="bi me-2" width="20" height="32">
+                </a>
+            </div>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a target="_blank" href="https://intranet.hcdiputados-ba.gov.ar/admin/" class="nav-link px-2 text-white">Intranet</a></li>
+              <li><a target="_blank" href="https://correo.hcdiputados-ba.gov.ar/" class="nav-link px-2 text-white">Mail</a></li>
+            </ul>
+          </div>
+        </div>
+    </header>
+    <div class="container mt-5 mb-5">
+        <div class="d-flex justify-content-center">
+                <img src="{{ asset('build/images/logo.png')}}" alt="HCDiputados" class="img-fluid" style="max-height: 120px;">
+        </div>
+        <div class="row justify-content-md-center mt-5">
+            
+            <!-- <div class="col-12 col-sm-12 col-md-9 col-lg-9">
+                <div class="alert alert-danger">ha ocurrido un error</div>
+            </div> -->
+            {% if error %}
+                <div class="col-12 col-sm-12 col-md-9 col-lg-9">
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                </div>
+            {% endif %}
+            <form class="col-12 col-sm-12 col-md-4 col-lg-4" method="post">
+                <div class="form-group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" value="{{ last_username }}" name="id" id="usuario" class="form-control" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Contraseña</label>
+                    <input type="password" name="password" id="inputPassword" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+    {% block footer %}
+        {% include './modulos/footer.html.twig' %}
+    {% endblock %}
+    {{ encore_entry_script_tags('app') }}
+    {% block javascripts %}{% endblock %}
+    </body>
+</html>

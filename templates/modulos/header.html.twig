@@ -1,0 +1,26 @@
+<header>
+  <b-navbar type="light">
+    <b-navbar-brand href="{{ path('home') }}">
+      <img class="img-fluid" width="180" :src="asset('images/logo.png')">
+    </b-navbar-brand>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <!-- Right aligned nav items -->
+      <b-navbar-nav class="ml-auto">
+        <b-row>
+          {# <b-col class="d-none d-sm-block"><img class=" d-inline" :src="asset('images/perfil.jpg')" style="height: 40px"></b-col> #}
+          <b-col>
+            <b-nav-item-dropdown right>
+              <!-- Using 'button-content' slot -->
+              <template #button-content>
+                {# <em>{{ app.user.username }}</em><br>
+                {{app.user.getRolesDescrip()[0].descrip}} #}
+              </template>
+              <b-dropdown-item href="{{ path('app_logout') }}">Cerrar sesion</b-dropdown-item>
+            </b-nav-item-dropdown>
+          </b-col>
+        </b-row>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+</header>

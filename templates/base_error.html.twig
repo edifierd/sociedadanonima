@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>{% block title %}CARPETAS RECINTO{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('build/app.css') }}" media="screen,projection">
+        <link rel="stylesheet" href="{{ asset('build/error.css') }}" media="screen,projection">
+        <link rel="icon" type="image/x-icon" href="{{ asset('build/images/favicon/favicon-32x32.png') }}" />
+    </head>
+    <body class="bgba">
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
